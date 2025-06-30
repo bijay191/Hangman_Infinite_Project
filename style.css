@@ -1,0 +1,64 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.word {
+  font-size: 2rem;
+  letter-spacing: 10px;
+  margin-bottom: 1rem;
+}
+
+.letters button {
+  margin: 5px;
+  padding: 10px;
+  width: 40px;
+  border: none;
+  background: #e0e0e0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.letters button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.message {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 1rem 0;
+}
+.hangman-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.hangman {
+  stroke: #444;
+  stroke-width: 3;
+}
+
+.part {
+  display: none;
+  stroke: #000;
+}
+
+.show {
+  display: inline;
+}
+
