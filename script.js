@@ -43,25 +43,37 @@ function createKeyboard() {
   for (let i = 65; i <= 90; i++) {
     const btn = document.createElement("button");
     btn.textContent = String.fromCharCode(i);
+    btn.classList.add("letter-button"); // optional for styling
     btn.addEventListener("click", () => handleGuess(btn));
     lettersContainer.appendChild(btn);
   }
 }
 
+
 function handleGuess(btn) {
   const letter = btn.textContent.toLowerCase();
   btn.disabled = true;
+
   if (selectedWord.includes(letter)) {
+    btn.classList.add("correct");
     guessed.push(letter);
     displayWord();
   } else {
+    btn.classList.add("wrong");
     wrongLetters.push(letter);
     wrong.textContent = wrongLetters.join(", ");
     showNextPart();
-    if (wrongLetters.length === parts.length) {
-      message.textContent = `💀 Game over! The word was "${selectedWord}"`;
-      disableAllButtons();
-    }
+  }
+
+  // End game checks
+  if (!wordContainer.textContent.includes("_")) {
+    message.textContent = "🎉 You win!";
+    disableAllButtons();
+  }
+
+  if (wrongLetters.length === parts.length) {
+    message.textContent = `💀 Game over! The word was "${selectedWord}"`;
+    disableAllButtons();
   }
 }
 

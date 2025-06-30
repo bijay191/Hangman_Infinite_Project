@@ -62,3 +62,15 @@ body {
   display: inline;
 }
 
+button.correct {
+  background-color: #4caf50 !important; /* Green */
+  color: white;
+  box-shadow: 0 0 8px #4caf50;
+}
+
+button.wrong {
+  background-color: #f44336 !important; /* Red */
+  color: white;
+  box-shadow: 0 0 8px #f44336;
+}
+
