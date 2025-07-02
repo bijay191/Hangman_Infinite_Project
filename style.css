@@ -1,6 +1,6 @@
 body {
-  font-family: Arial, sans-serif;
-  background: #f2f2f2;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background: linear-gradient(to right, #ffecd2, #fcb69f);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10,26 +10,45 @@ body {
 
 .container {
   text-align: center;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.9);
   padding: 2rem;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+h1 {
+  font-size: 3rem;
+  color: #ff6f61;
 }
 
 .word {
-  font-size: 2rem;
-  letter-spacing: 10px;
+  font-size: 2.5rem;
+  letter-spacing: 12px;
   margin-bottom: 1rem;
+}
+
+.message, #score, #hint {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+#score {
+  color: #ff6f61;
 }
 
 .letters button {
   margin: 5px;
   padding: 10px;
   width: 40px;
+  background: #ff6f61;
+  color: white;
   border: none;
-  background: #e0e0e0;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.letters button:hover {
+  background: #ff3b30;
 }
 
 .letters button:disabled {
@@ -37,40 +56,20 @@ body {
   cursor: not-allowed;
 }
 
-.message {
-  font-size: 1.2rem;
-  color: #333;
-  margin: 1rem 0;
-}
 .hangman-container {
   display: flex;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-top: 2rem;
 }
 
 .hangman {
   stroke: #444;
-  stroke-width: 3;
 }
 
 .part {
-  display: none;
-  stroke: #000;
+  visibility: hidden;
 }
 
 .show {
-  display: inline;
+  visibility: visible;
 }
-
-button.correct {
-  background-color: #4caf50 !important; /* Green */
-  color: white;
-  box-shadow: 0 0 8px #4caf50;
-}
-
-button.wrong {
-  background-color: #f44336 !important; /* Red */
-  color: white;
-  box-shadow: 0 0 8px #f44336;
-}
-
